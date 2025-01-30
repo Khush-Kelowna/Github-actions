@@ -1,0 +1,27 @@
+name: First workflow
+on: [push]
+
+jobs:
+    run-shell-commands:
+       runs-on: ubuntu-latest
+       steps: 
+          - name: echo a string
+            run: echo "Nakodar chowk!"
+          - name: Multiline Command
+            run: |
+                node -v
+                npm -v
+    paralell-job-macos:
+      runs-on: macos-latest
+      steps:
+        - name: SV
+          run: sw-version
+    dependent-job:
+      runs-on: windows-latest
+      needs: [run-shell-commands]
+      steps:
+        - name: echo a string
+          run: Write-Output "Windows String"
+        - name: Error Step
+          run: Nakli Kamm
+
