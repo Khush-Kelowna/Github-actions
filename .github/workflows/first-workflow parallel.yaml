@@ -20,6 +20,6 @@ jobs:
       runs-on: windows-latest
       needs: [run-shell-commands]
       steps:
-        - name: echo a string
+        - name: echo a strings
           run: Write-Output "Windows String"
 
