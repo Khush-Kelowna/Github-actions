@@ -1,4 +1,4 @@
-name: First workflow
+name: Workflow commands
 on: [push]
 
 jobs:
