@@ -1,0 +1,11 @@
+name: Simple Action
+on: [push]
+
+jobs:
+    simple-action:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Uses predefined action
+              uses: actions/Checkout@main
+            - name: Log Greeting Time
+              run: echo "Hi"
